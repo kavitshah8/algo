@@ -5,10 +5,10 @@
 
 	Related questions:
 	Q1) An array contains some random positive and negative numbers.
-			Arrange array elements such that all positive elements are on left side, don't care about negative elements. 
-		 	Number of operations allowed - O(n) 
+	Arrange array elements such that all positive elements are on left side, don't care about negative elements. 
+	Number of operations allowed - O(n) 
 	A1) Append 0 to the array and set it as the pivot and run descending quicksort. 
-			All values greater than 0 will end up on the left side after 1 iteration.
+	All values greater than 0 will end up on the left side after 1 iteration.
 */
 
 #include <stdio.h>
