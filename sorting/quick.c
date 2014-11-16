@@ -2,6 +2,13 @@
 	Algorithm: Quick sort / Partition - exchange sort
 	Avg case running time: O(n*log(n))
 	Worst case running time: O(n*n)
+
+	Related questions:
+	Q1) An array contains some random positive and negative numbers.
+			Arrange array elements such that all positive elements are on left side, don't care about negative elements. 
+		 	Number of operations allowed - O(n) 
+	A1) Append 0 to the array and set it as the pivot and run descending quicksort. 
+			All values greater than 0 will end up on the left side after 1 iteration.
 */
 
 #include <stdio.h>
@@ -48,11 +55,12 @@ void printArray(int arr[]){
 	int i;
 
 	for (i = 0; i < SIZE; i++){
-		printf("arr[%d] = %d\n",i, arr[i]);
+		printf("arr[%d] = %d\n", i, arr[i]);
 	}	
 
 }
 
+// Ascending quick sort
 void sort(int arr[], int l, int r){
 
 	int m;
@@ -72,18 +80,18 @@ int partition(int arr[], int l, int r){
 	// saves the pivot for swapping
 	pivot = arr[l];
 
-	// storing starting and ending indxes
+	// stores starting and ending indxes
 	i = l;
 	j = r + 1;
 
 	while (1){
 
-		// find the first element bigger than pivot from left side
+		// finds the first element bigger than pivot from left side
 		do{
 			++i;
 		}while (arr[i] <= pivot && i <= r);
 		
-		// find the first element smaller than pivot from right side
+		// finds the first element smaller than pivot from right side
 		do{
 			--j;
 		}while (arr[j] > pivot);
@@ -92,13 +100,13 @@ int partition(int arr[], int l, int r){
 			break;
 		}
 
-		// swap values
+		// swaps values
 		t = arr[i];
 		arr[i] = arr[j];
 		arr[j] = t;
 	}
 
-	// swap pivot
+	// swaps pivot
 	arr[l] = arr[j];
 	arr[j] = pivot;
 
