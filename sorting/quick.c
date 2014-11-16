@@ -1,5 +1,7 @@
 /*
 	Algorithm: Quick sort / Partition - exchange sort
+	Avg case running time: O(n*log(n))
+	Worst case running time: O(n*n)
 */
 
 #include <stdio.h>
