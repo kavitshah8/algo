@@ -84,6 +84,9 @@ int partition(int arr[], int l, int r){
 	i = l;
 	j = r + 1;
 
+	// puts all the elements less than pivot at the begining of the list
+	// puts all the elements greater than pivot at the end of the list
+
 	while (1){
 
 		// finds the first element bigger than pivot from left side
@@ -106,7 +109,7 @@ int partition(int arr[], int l, int r){
 		arr[j] = t;
 	}
 
-	// swaps pivot
+	// puts the pivot at the right place
 	arr[l] = arr[j];
 	arr[j] = pivot;
 
