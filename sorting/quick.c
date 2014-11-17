@@ -16,12 +16,12 @@
 
 #define SIZE 10
 
-void initializeArray(int arr[]);
-void printArray(int arr[]);
-void sort(int arr[], int, int);
-int partition(int arr[], int, int);
+void initializeArray (int arr[]);
+void printArray (int arr[]);
+void sort (int arr[], int, int);
+int partition (int arr[], int, int);
 
-int main(){
+int main() {
 
 	int arr[SIZE];
 
@@ -40,39 +40,39 @@ int main(){
 	return 0;
 }
 
-void initializeArray(int arr[]){
+void initializeArray (int arr[]) {
 
 	int i;
 
-	for (i = 0; i < SIZE; i++){
+	for (i = 0; i < SIZE; i++) {
 		arr[i] = rand() % SIZE;
 	}
 
 }
 
-void printArray(int arr[]){
+void printArray (int arr[]) {
 	
 	int i;
 
-	for (i = 0; i < SIZE; i++){
+	for (i = 0; i < SIZE; i++) {
 		printf("arr[%d] = %d\n", i, arr[i]);
 	}	
 
 }
 
 // Ascending quick sort
-void sort(int arr[], int l, int r){
+void sort (int arr[], int l, int r) {
 
 	int m;
 
-	if (l < r){
+	if (l < r) {
 		m = partition(arr, l, r);
 		sort(arr, l, m-1);
 		sort(arr, m+1, r);
 	} 
 }
 
-int partition(int arr[], int l, int r){
+int partition (int arr[], int l, int r) {
 	
 	int i, j;
 	int pivot, t;
@@ -87,19 +87,19 @@ int partition(int arr[], int l, int r){
 	// puts all the elements less than pivot at the begining of the list
 	// puts all the elements greater than pivot at the end of the list
 
-	while (1){
+	while (1) {
 
 		// finds the first element bigger than pivot from left side
-		do{
+		do {
 			++i;
-		}while (arr[i] <= pivot && i <= r);
+		} while (arr[i] <= pivot && i <= r);
 		
 		// finds the first element smaller than pivot from right side
-		do{
+		do {
 			--j;
-		}while (arr[j] > pivot);
+		} while (arr[j] > pivot);
 		
-		if (i >= j){
+		if (i >= j) {
 			break;
 		}
 
