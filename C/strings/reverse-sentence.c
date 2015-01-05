@@ -1,27 +1,38 @@
 #include <stdio.h>
 
 void reverseSentence(char*);
-void reverse(char*, char*);
+void reverseWord(char*, char*);
 
-int main(){
+int main()
+{
+
 	char str[] = "Hello";
-	reverse(str, str+4);	
+
+	reverseWord(str, str+4);	
 	printf(" %s\n",str);
+
 	return 0;
 }
 
-void reverseSentence(char* s){
+void reverseSentence(char* s)
+{
 	// while(s){
 		printf(" %s\n",s);
 		// s++;
 	// }
 }
 
-void reverse(char* begin, char* end){
+void reverseWord(char* begin, char* end)
+{
 	char temp;
-	while (begin < end){
+	while (begin < end)
+	{
 		temp = *begin;
-		*begin++ = *end;
-		*end-- = temp;
+		*begin = *end;
+		*end = temp;
+		begin++;
+		end--;
+		// *begin++ = *end;
+		// *end-- = temp;
 	}
 }
