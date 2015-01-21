@@ -22,3 +22,5 @@ console.log(obj.prop.getName()); // Yugam
 
 var test = obj.prop.getName;
 console.log(test()); // Kavit in browser, but undefined in node environment
+
+console.log(test.call(obj.prop)); // changing the scope of this with call
