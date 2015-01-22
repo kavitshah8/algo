@@ -3,9 +3,12 @@ var testModule = (function(){
 	var counter = 0;
 
 	return {
+
 		test: function(){
 			console.log(counter);
+		
 		}
+	
 	};
 
 })();

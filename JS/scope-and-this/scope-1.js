@@ -10,7 +10,9 @@ if ( typeof a !== 'undefined' ) { // Way to check the variable is defined or not
 	
 	console.log(a);
 
-}else{
+} 
+else {
 
 	console.log(b); // 5
+
 }

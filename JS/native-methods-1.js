@@ -26,6 +26,23 @@ String.prototype.repeatify = String.prototype.repeatify || function ( times ) {
 	return str;
 };
 
+String.prototype.palindrome = String.prototype.palindrome || function ( ) {
+
+	if ( typeof this == 'string' ) {
+
+		return this === this.split('').reverse().join('');
+		
+	}
+	else {
+
+		return false;
+	}
+
+};
+
 console.log('i am all lowercase'.capitalize());
 
 console.log('hello'.repeatify(3));
+
+console.log('lol'.palindrome());
+console.log('loll'.palindrome());

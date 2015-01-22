@@ -3,11 +3,11 @@
 
 function speak () {
 
-  var reply = [this.person,'is',this.feeling].join(' ');
+  var reply = [ this.person, 'is', this.feeling].join(' ');
 
-  console.log(reply);
+  console.log( reply );
 }
 
-var i = {person: 'Joe', feeling: 'hungry'};
+var i = { person: 'Joe', feeling: 'hungry' };
 
-speak.call(i);
+speak.call( i );

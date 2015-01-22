@@ -29,7 +29,7 @@ function filterByID ( element ) {
 
 function filterByExtension ( element ) {
 
-	if ( element.path && ( typeof(element.path ) === 'string') ) {
+	if ( element.path && ( typeof( element.path ) === 'string') ) {
 
 		var strToArr = element.path.split( '.' );
 

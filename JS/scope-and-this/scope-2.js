@@ -18,6 +18,7 @@ var myObject = {
 
     }
 };
+
 myObject.func();
 
 // The above code will output the following to the console:
