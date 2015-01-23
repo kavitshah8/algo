@@ -6,3 +6,8 @@
 4. `type of` something
 5. scope (`this`)
 6. Dynamic scoping with `apply` 
+
+#### To-do
+
+1. longest substring without repeating characters
+2. Overlapping rectangles

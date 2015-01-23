@@ -1,4 +1,4 @@
 FAQ:
 
-### Desgin questions:
+### Desgin:
 1. Polymorphism  
