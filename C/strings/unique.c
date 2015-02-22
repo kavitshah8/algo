@@ -21,6 +21,8 @@ int isUniqueStr(char *str){
 	int charSet[256] = {0};
 	int i;
 
+	if (str == NULL) return 0;
+
 	for(i = 0; i < strlen(str); i++){
 
 		if (charSet[ str[i] ])

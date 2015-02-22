@@ -5,8 +5,8 @@ int main(){
 	// Character Pointer
 	char *str = "Hello";
 
-	char *strArr[3] = {"Hello","World","C"};
 	// Arrays of Character Pointer
+	char *strArr[3] = {"Hello","World","C"};
 
 	printf("%s \n", str);
 
