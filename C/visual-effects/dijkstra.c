@@ -3,6 +3,7 @@
  
 // Number of vertices in the graph
 #define V 5
+#define FALSE 0
  
 int minDistance(int dist[], int sptSet[]) {
   
@@ -13,7 +14,7 @@ int minDistance(int dist[], int sptSet[]) {
  
   for (int v = 0; v < V; v++) {
     
-    if (sptSet[v] == 0 && dist[v] <= min) {
+    if (sptSet[v] == FALSE && dist[v] <= min) {
     
       min = dist[v];
       min_index = v;
