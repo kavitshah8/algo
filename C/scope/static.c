@@ -29,4 +29,5 @@ void f(){
 void g(){
 
 	printf("Gloabal from g: %d \n", gloabl );
+	printf("Function Name = %s \n", __FUNCTION__); // Macro to print the function name
 }
