@@ -1,15 +1,16 @@
 #include <stdio.h>
 
-void SwapBytes(void *pv, size_t n)
+void SwapBytes(void *i, size_t n)
 {
-    char *p = (char*)pv;
-    size_t lo, hi;
+    char *p = (char*)i;
+    
+    size_t low_bit, high_bit;
 
-    for( lo = 0, hi = n-1; hi > lo; lo++, hi--)
+    for( low_bit = 0, high_bit = n-1; high_bit > low_bit; low_bit++, high_bit--)
     {
-        char tmp = p[lo];
-        p[lo] = p[hi];
-        p[hi] = tmp;
+      char tmp = p[low_bit];
+      p[low_bit] = p[high_bit];
+      p[high_bit] = tmp;
     }
 }
 
@@ -17,11 +18,14 @@ int main()
 {	
   unsigned int i = 0x12345678;
 
-  char *c = (char*)&i;
+  int a = 0x1;
+  
+  char *c = (char*)&a;
 
   printf("i = %x\n" , i);
 
   SwapBytes(&i, sizeof(i));
+
   printf("i = %x\n" , i);
 
   if (*c)    
