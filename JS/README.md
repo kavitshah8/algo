@@ -2,8 +2,8 @@
 
 1. prototypal inheritance
 2. closures
-3. event loop
-4. `type of` something
+3. event queue and event loop
+4. `type of` , 'hasOwnProperty' something
 5. scope (`this`)
 6. Dynamic scoping with `apply` 
 
