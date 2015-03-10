@@ -6,7 +6,7 @@ function removeDuplicate (arr) {
 
 	for (var i = 0; i < arr.length; i++) {
 		
-		if ( !hash[arr[i]] ) {
+		if (!hash[arr[i]]) {
 
 			hash[arr[i]] = 1;
 		
@@ -17,4 +17,25 @@ function removeDuplicate (arr) {
 	return Object.keys(hash);
 }
 
-console.log( removeDuplicate(arr) ); // ['john', 'kavit', 'teju']
+function arrayToString (arr) {
+
+	var str = '';
+
+	for (var i = 0; i < arr.length; i++) {
+		
+		str += arr[i];
+
+		if (i != arr.length - 1) {
+
+			str += ',';
+
+		};
+
+	};
+
+	return str;
+}
+
+console.log(arrayToString(arr)); // john,kavit,teju,john
+
+console.log(removeDuplicate(arr)); // ['john', 'kavit', 'teju']
