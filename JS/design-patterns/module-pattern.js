@@ -13,5 +13,10 @@ var testModule = (function(){
 
 })();
 
-testModule.test();
-testModule.counter;
+//testModule = { test: function }
+
+testModule.test; // function() {}
+
+testModule.test(); // 0
+
+testModule.counter; // undefined
