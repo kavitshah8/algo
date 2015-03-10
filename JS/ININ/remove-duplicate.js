@@ -17,4 +17,4 @@ function removeDuplicate (arr) {
 	return Object.keys(hash);
 }
 
-console.log(removeDuplicate(arr));
+console.log( removeDuplicate(arr) ); // ['john', 'kavit', 'teju']
