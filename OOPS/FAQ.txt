@@ -1,0 +1,8 @@
+0. Base class vs Derived class
+1. Interface vs Abstract class
+2. Overwriting vs Overloading 
+		over writing - accessing parent's methods
+		over loading - functional overloading (using + sign for addition as well as string concatenation)
+								 - class over loading (using same method with multiple arguments)
+3. Java : Pass by value vs Pass by reference
+4.
