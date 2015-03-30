@@ -43,11 +43,37 @@ BinarySearchTree.prototype.add = function(value) {
 	}
 };
 
+BinarySearchTree.prototype.traverse = function(tree) {
+	
+	// helper function
+	function inOrder(node){
+
+		if (node) {
+			
+			if (node.left) {
+				inOrder.call(this, node.left);
+			}
+
+			console.log(node);
+			
+			if (node.right) {
+				inOrder.call(this, node.right)
+			}
+		
+		}
+	
+	}
+
+	inOrder(tree._root);
+};
+
 var bst = new BinarySearchTree();
 bst.add(15);
 bst.add(5);
+bst.add(4);
+bst.add(6);
 bst.add(20);
-bst.add(10);
-bst.add(35);
-
-console.log(bst);
+bst.add(16);
+bst.add(21);
+bst.traverse(bst);
+// console.log(bst);
