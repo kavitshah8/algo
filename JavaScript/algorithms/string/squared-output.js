@@ -21,4 +21,4 @@ function processData (str) {
     }
 }
 
-processData("kavitsha");
+processData("kavitsha"); // kav \n its \n ha
