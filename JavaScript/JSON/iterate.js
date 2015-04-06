@@ -1,4 +1,5 @@
-var json = {"firstName":"Kavit",
+var json = {
+	"firstName":"Kavit",
 	"lastName":"Shah",
 	"contactNumber":"408410----"
 };
