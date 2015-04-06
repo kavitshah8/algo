@@ -1,7 +1,7 @@
 var json = {"firstName":"Kavit",
-						"lastName":"Shah",
-						"contactNumber":"408410----"
-					};
+	"lastName":"Shah",
+	"contactNumber":"408410----"
+};
 
 for (var key in json){
 
