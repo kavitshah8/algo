@@ -1,4 +1,4 @@
-function fizzBuzz() {
+(function fizzBuzz() {
 
 	var i, output;
 
@@ -11,14 +11,14 @@ function fizzBuzz() {
 	  	output += 'Fizz';
 	  } 
 
-	  if (!(i % 5)) {
+	  if ( !(i % 5) ) {
 	  	
 	  	output += 'Buzz';
 	  }
 
 	  console.log(output || i);
 	}
-}
+})();
 
-fizzBuzz();
+// fizzBuzz();
  
