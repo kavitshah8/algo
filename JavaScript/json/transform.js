@@ -29,7 +29,7 @@ function transformData(endorsements) {
             result[endorsements[i].skill].user = [];
             result[endorsements[i].skill].user.push(endorsements[i].user);
             result[endorsements[i].skill].count = 1;
-        		// console.log(result);
+            // console.log(result);
         }   
     }
 
@@ -37,7 +37,66 @@ function transformData(endorsements) {
        return {'skill': value, 'user':result[value].user, 'count':result[value].count};    
    });
     
-    return result;
+  return result;
 }
 
 console.log(transformData(endorsements));
+
+// Method 2 : Step 1 : Convert the data in the following format
+// { javascript: [ 'Chad', 'Bill', 'Sue' ],
+//   html: [ 'Sue HTML' ],
+//   css: [ 'Sue CSS', 'Bill CSS' ] }
+
+(function (endorsements) {
+
+  var result = {};
+
+  for (var i = 0; i < endorsements.length; i++) {
+    
+    if (result[endorsements[i].skill]) {
+
+      result[endorsements[i].skill].push(endorsements[i].user);
+
+    } else {
+
+      result[endorsements[i].skill] = [];
+      result[endorsements[i].skill].push(endorsements[i].user);
+
+    }
+  }
+
+  // console.log(result);
+
+})(endorsements);
+
+// Method 2 : Step 2 : Entire solution
+
+(function (endorsements) {
+
+  var result = {};
+
+  for (var i = 0; i < endorsements.length; i++) {
+    
+    if (result[endorsements[i].skill]) {
+
+      result[endorsements[i].skill].push(endorsements[i].user);
+
+    } else {
+
+      result[endorsements[i].skill] = [];
+      result[endorsements[i].skill].push(endorsements[i].user);
+
+    }
+  }
+
+  var transofrmedData = Object.keys(result).map(function(value) {
+    var obj = {};
+    obj["skills"] = value;
+    obj["users"] = result[value];
+    obj["count"] = result[value].length;
+    return obj;
+  });
+
+  // console.log(transofrmedData);
+  
+})(endorsements);
