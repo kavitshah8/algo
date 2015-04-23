@@ -3,8 +3,10 @@ var str = 'This is a test string';
 function uppperLower (str) {
 	
 	var strArray = str.split(' ');
+	// Another way of converting a string into an Array is the following
+	// var strArray = [].map.call(str, function(x){return x;})
 
-	for (i = 0; i < strArray.length; i++) {
+	for (var i = 0; i < strArray.length; i++) {
 
 		if ( i % 2 === 0) {
 
