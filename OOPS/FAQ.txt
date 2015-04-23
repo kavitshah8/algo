@@ -1,7 +1,27 @@
 0. Base class vs Derived class
+
 1. Interface vs Abstract class
+
 2. Overriding vs Overloading 
-		overiding - object uses parent's(derived) class methods rather than grandparent's(base) class method 
-		overloading - functional overloading (using + sign for addition as well as string concatenation)
-								- class over loading (methods have the same but have difeerent type of different number of arguments)
+		
+		Overiding - 
+			It occurs when a method shares the same name and function signature as another method in its super class. 
+			For example,
+			Shape = function(){ ... }
+			Shape.prototype.printMe("I am Shape");
+
+			Circle = new Shape();
+			Circle.prototype.printMe("I am Circle");
+
+		Overloading -
+
+			- Operator overloading 
+					using + sign for addition as well as string concatenation
+		
+			- Method/Functional over loading:
+					means when two methods have the same name but differ in the type of or number of arguments, meaning it differs in function signature. For example, 
+					`int computeArea (int a ) { ... }`
+					`int computeArea (float a ) { ... }`
+					`int computeArea (int a, int b ) { ... }`
+
 3. Java : Pass by value vs Pass by reference
