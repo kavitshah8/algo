@@ -43,7 +43,7 @@ function isPermute(str1, str2) {
 		
 		str1Count[str2[i]] -= 1;
 
-		if(str1Count[str2[i]] < 0)
+		if((str1Count[str2[i]] < 0) || (!str1Count[str2[i]]) )
 			return false;
 		
 	};
