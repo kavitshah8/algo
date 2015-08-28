@@ -17,6 +17,21 @@ function removeDuplicate (arr) {
 	return Object.keys(hash);
 }
 
+function removeDuplicates2 (arr) {
+
+  var hash = {};
+
+  arr.forEach( function (i) {
+
+    if ( !hash[i] ) {
+
+      hash[i] = true;
+    }
+  });
+
+  return Object.keys(hash);
+}
+
 function arrayToString (arr) {
 
 	var str = '';
