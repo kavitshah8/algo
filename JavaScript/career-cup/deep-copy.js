@@ -22,4 +22,18 @@ var v2 = v1;
 
 // To create a copy of v1 using JSON object
 var temp = JSON.stringify(v1);
-var v2 = JSON.parse(temp);
+var v3 = JSON.parse(temp);
+
+// To create a copy of v1 using prototype object
+var v4 = Object.create(v1); 
+// This method will fail for the case of arrays as shown below
+v4.name; // 'Tony'
+v4.name = 'Jackson';
+v4.name; // 'Jackson'
+v1.name; //'Tony'
+
+v4.hobby; // ['meditation','swimming','running']
+v3.hobby; // ['meditation','swimming','running']
+v4.hobby.push('yoga');
+v4.hobby; // ['meditation','swimming','running','yoga']
+v3.hobby; // ['meditation','swimming','running','yoga']
