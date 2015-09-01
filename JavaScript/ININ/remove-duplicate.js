@@ -32,6 +32,9 @@ function removeDuplicates2 (arr) {
   return Object.keys(hash);
 }
 
+// In-built method
+console.log(arr.toString());
+
 function arrayToString (arr) {
 
 	var str = '';
