@@ -100,3 +100,33 @@ console.log(transformData(endorsements));
   // console.log(transofrmedData);
   
 })(endorsements);
+
+// Mothdo 3 : Similar logic but more advanced array methods
+
+// Array methods: forEach(), map(), push()
+// Object methods: Object.keys()
+
+function transformData (endo) {
+    
+    var tra = {};
+    
+    endo.forEach(function(el) {
+        if (tra[el.skill]) {
+            tra[el.skill].push(el.user);
+        } else {
+        	tra[el.skill] = [];
+            tra[el.skill].push(el.user);
+        }
+    });	
+
+    var res = Object.keys(tra).map(function(key) {    	
+        var obj = {};
+        obj["skills"] = key;
+        obj["values"] = tra[key];
+      	return obj;
+    });
+    
+	console.log(res);
+}
+
+transformData(endorsements);
