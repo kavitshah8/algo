@@ -51,6 +51,6 @@ function isPermute(str1, str2) {
 	return true;
 }
 
-console.log(isPermutation('dog','god')); // true
-console.log(isPermutation('foo','bar')); // false
-console.log(isPermutation('foo','fooo')); // false
+console.log(isPermute('dog','god')); // true
+console.log(isPermute('foo','bar')); // false
+console.log(isPermute('foo','fooo')); // false
