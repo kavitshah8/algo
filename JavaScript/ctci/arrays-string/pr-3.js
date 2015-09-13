@@ -22,28 +22,24 @@ console.log(isPermutation('foo','fooo')); // false
 // -----
 
 function isPermute(str1, str2) {
+    if(str1.length !== str2.length)
+        return false;
 
-	if(str1.length !== str2.length)
-		return false;
-
-	// create a character count for the string
-	var str1Count = [];
-
-	for (var i = 0; i < str1.length; i++) {
-		if(str1Count[str1[i]])
-			str1Count[str1[i]]++;
-		else 
-			str1Count[str1[i]] = 1;
-	}
-
-	// compare the character count with the second string
-	for (var i = 0; i < str2.length; i++) {
-		str1Count[str2[i]] -= 1;
-		if((str1Count[str2[i]] < 0) || (!str1Count[str2[i]]) )
+    // create a character count for the string
+    var str1Count = {};
+    [].forEach.call(str1, function(ch){
+        str1Count[ch] = str1Count[ch] ? 1 + str1Count[ch] : 1;
+    })
+	
+    // compare the character count with the second string
+    for (var i = 0; i < str2.length; i++) {   
+        if(!str1Count[str2[i]]) {
 			return false;
-	}
-
-	return true;
+		} else {
+            str1Count[str2[i]] -= 1;
+        }
+    }
+    return true;
 }
 
 console.log(isPermute('dog','god')); // true
