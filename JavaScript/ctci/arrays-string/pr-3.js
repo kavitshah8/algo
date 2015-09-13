@@ -33,9 +33,8 @@ function isPermute(str1, str2) {
 		
 		if(str1Count[str1[i]])
 			str1Count[str1[i]]++;
-		
-		str1Count[str1[i]] = 1;
-
+		else 
+			str1Count[str1[i]] = 1;
 	};
 
 	// compare the character count with the second string
