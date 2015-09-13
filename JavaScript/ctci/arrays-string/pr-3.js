@@ -30,22 +30,18 @@ function isPermute(str1, str2) {
 	var str1Count = [];
 
 	for (var i = 0; i < str1.length; i++) {
-		
 		if(str1Count[str1[i]])
 			str1Count[str1[i]]++;
 		else 
 			str1Count[str1[i]] = 1;
-	};
+	}
 
 	// compare the character count with the second string
 	for (var i = 0; i < str2.length; i++) {
-		
 		str1Count[str2[i]] -= 1;
-
 		if((str1Count[str2[i]] < 0) || (!str1Count[str2[i]]) )
 			return false;
-		
-	};
+	}
 
 	return true;
 }
