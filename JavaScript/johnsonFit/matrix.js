@@ -17,6 +17,7 @@ function defaultMatrix(size) { // returns array
 
 
 var matrix = defaultMatrix(5);
+console.log(matrix);
 matrix[1][1] = 1; 
 matrix[2][2] = 2; 
 console.log(matrix);
