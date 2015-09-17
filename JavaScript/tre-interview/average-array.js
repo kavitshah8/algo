@@ -22,6 +22,6 @@ count = 0;
 
 arr.filter( average );
 
-console.log("Sum = ", sum);
-console.log("Count = ", count);
-console.log("Average = ", sum/count);
+console.log("Sum = ", sum); // 45
+console.log("Count = ", count); // 9
+console.log("Average = ", sum/count); // 5
