@@ -19,7 +19,7 @@ console.log(isOdd(3)); // true
 
 
 Number.prototype.isOdd = function(num) {
-	if (typeof(num) === 'number') {	
+	if (typeof num === 'number') {	
 		if (num % 2 === 1) {
 			return true;
 		}
