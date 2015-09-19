@@ -13,52 +13,36 @@ var arr = [
 					];
 
 var invalidEntries;
+function filterByID(element) {
 
-function filterByID ( element ) {
-
-	if ( element.id && ( typeof( element.id ) === 'number') ) {
-
+	if(element.id && (typeof element.id === 'number')) {
 		return element;		
 	}
 	else {
-
 		invalidEntries++;
 	}
-
 }
 
-function filterByExtension ( element ) {
-
-	if ( element.path && ( typeof( element.path ) === 'string') ) {
-
+function filterByExtension(element) {
+	if ( element.path && (typeof element.path === 'string')) {
 		var strToArr = element.path.split( '.' );
-
 		var extension = strToArr[strToArr.length - 1];
-
 		if ( extension === 'txt' ) {
-
 			return element;
 		}
 		else {
-
 			invalidEntries++;
 		}
-
 	}
-	else
-	{
+	else{
 		invalidEntries++;
 	}
-
 }
 
-function sortByID ( arr ) {
-
+function sortByID(arr) {
 	return arr.sort(function ( first, second ) {
-
-				return (first.id - second.id);
+		return (first.id - second.id);
 	});
-
 }
 
 (function filterSortAndReport ( arr ) {
