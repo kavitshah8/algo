@@ -1,5 +1,5 @@
 function isOdd(num) {
-	if (typeof(num) === 'number') {	
+	if (typeof num === 'number') {	
 		if (num % 2 === 1) {
 			return true;
 		}
